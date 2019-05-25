@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Acitivity.MainAcitivity">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/tilebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/buttonborder"
+        app:barStyle="light"
+        app:titleColor="@color/whitesmoke"
+        app:titleSize="22sp"
+        app:leftIcon="@color/transparent"
+        app:title="问答客服" />
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tilebar">
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.hanks.htextview.evaporate.EvaporateTextView
+                android:id="@+id/eva1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:textColor="@color/whitesmoke"
+                android:textSize="23sp" />
+
+            <com.hanks.htextview.evaporate.EvaporateTextView
+                android:id="@+id/eva2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/eva1"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:text="专注数控机床维修"
+                android:textColor="@color/whitesmoke"
+                android:textSize="23sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/l1">
+
+            <com.hanks.htextview.rainbow.RainbowTextView
+                android:id="@+id/textview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="#2f00"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="点我进入"
+                android:textSize="23sp"
+                app:colorSpace="150dp"
+                app:colorSpeed="4dp" />
+
+            <at.markushi.ui.CircleButton
+                android:id="@+id/circlebutton"
+                android:layout_centerInParent="true"
+                android:layout_width="164dip"
+                android:layout_height="164dip"
+                android:layout_gravity="center"
+                android:src="@drawable/girl_icon"
+                app:cb_pressedRingWidth="8dip" />
+
+
+                <com.hanks.htextview.rainbow.RainbowTextView
+                    android:id="@+id/textview3"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="103dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="#2f00"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="智能客服"
+                    android:textSize="23sp"
+                    app:colorSpace="150dp"
+                    app:colorSpeed="4dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/buttonborder"
+        android:layout_below="@id/r1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="12dp"
+            android:text="用法样例展示"
+            android:textSize="25sp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="96dp"
+            android:layout_height="212dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/transparent"
+            android:src="@drawable/screneshot1"
+            app:civ_border_color="@color/whitesmoke"
+            app:civ_border_width="1dp" />
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="100dp"
+            android:layout_height="215dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/profile_image"
+            android:src="@drawable/sceenshot2" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/image2"
+            android:src="@drawable/sreenshot3" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    tools:context=".Acitivity.MainAcitivity">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/r1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.hjq.bar.TitleBar
+                        android:id="@+id/titlebar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/buttonborder"
+                        app:barStyle="light"
+                        app:leftIcon="@color/transparent"
+                        app:title="个人中心"
+                        app:titleColor="@color/whitesmoke"
+                        app:titleSize="22sp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:layout_below="@id/titlebar"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/man" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/r3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonborder"
+                    android:layout_below="@id/r1">
+                    <TextView
+                        android:text="机器型号对论坛可见"
+                        android:id="@+id/t1"
+                        android:textSize="25dp"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content" />
+
+                    <com.suke.widget.SwitchButton
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/t1" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/r2"
+                    android:paddingTop="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/r3">
+
+                    <Button
+                        android:id="@+id/setMachineButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:text="编辑自家设备"
+                        android:textColor="@color/whitesmoke"
+                        android:textSize="20sp" />
+
+                    <id.yuana.itemsettingview.ItemSettingView
+                        android:id="@+id/forumInform"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/crackhistory"
+                        android:background="?attr/selectableItemBackground"
+                        android:padding="10dp"
+                        app:settingActionIcon="@drawable/ic_arrow_right"
+                        app:settingDescriptionColor="@android:color/holo_green_light"
+                        app:settingIcon="@drawable/inform"
+                        app:settingLabel="论坛消息"
+                        app:settingLabelColor="@android:color/holo_green_dark" />
+
+                    <id.yuana.itemsettingview.ItemSettingView
+                        android:id="@+id/faulttable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/forumInform"
+                        android:background="?attr/selectableItemBackground"
+                        android:padding="10dp"
+                        app:settingActionIcon="@drawable/ic_arrow_right"
+                        app:settingDescriptionColor="@android:color/holo_green_light"
+                        app:settingIcon="@drawable/table"
+                        app:settingLabel="错误代码参照表"
+                        app:settingLabelColor="@android:color/holo_green_dark" />
+
+                    <id.yuana.itemsettingview.ItemSettingView
+                        android:id="@+id/crackhistory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/setMachineButton"
+                        android:background="?attr/selectableItemBackground"
+                        android:padding="10dp"
+                        app:settingActionIcon="@drawable/ic_arrow_right"
+                        app:settingDescriptionColor="@android:color/holo_green_light"
+                        app:settingIcon="@drawable/nickname"
+                        app:settingLabel="故障记录"
+                        app:settingLabelColor="@android:color/holo_green_dark" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

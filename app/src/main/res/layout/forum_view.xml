@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:background="@drawable/buttonborder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="数控机床维修论坛"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@+id/title"
+            android:background="@drawable/add" />
+
+        <Button
+            android:id="@+id/refresh"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/add"
+            android:background="@drawable/reload" />
+
+        <RadioGroup
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/refresh"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/buttonborder"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioTimeButton"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:checked="true"
+                android:text="时间" />
+
+            <RadioButton
+                android:id="@+id/radioHeatButton"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginEnd="0dp"
+                android:text="热度" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/r1">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView
+                    android:id="@+id/forum_expandable_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="600dp" />
+            </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

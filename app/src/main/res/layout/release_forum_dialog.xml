@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_centerInParent="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/t1"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:text="展示机床信息"
+            android:textSize="25sp" />
+
+        <com.suke.widget.SwitchButton
+            android:id="@+id/switch_button"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/t1" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/r2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/r1">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edit_text2"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:hint="故障内容"
+            android:textSize="16sp"
+            app:met_baseColor="@android:color/black"
+            app:met_floatingLabel="highlight"
+            app:met_maxCharacters="100"
+            app:met_primaryColor="?colorAccent"
+            app:met_singleLineEllipsis="true" />
+
+        <Button
+            android:id="@+id/buttonVoice"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@id/edit_text2"
+            android:background="@drawable/micro"
+            android:paddingBottom="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/r3"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/r2">
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="47dp"
+            android:background="@drawable/cancel" />
+
+        <Button
+            android:id="@+id/publish"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="44dp"
+            android:background="@drawable/check"/>
+    </RelativeLayout>
+</RelativeLayout>
