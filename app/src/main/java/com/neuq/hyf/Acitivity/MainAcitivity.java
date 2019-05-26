@@ -110,9 +110,9 @@ public class MainAcitivity extends AppCompatActivity implements View.OnClickList
         final ArrayList<NavigationTabBar.Model> models = new ArrayList<>();
         models.add(
                 new NavigationTabBar.Model.Builder(
-                        getResources().getDrawable(R.drawable.hsitory_icon),
+                        getResources().getDrawable(R.drawable.forum),
                         Color.parseColor(colors[0]))
-                        .selectedIcon(getResources().getDrawable(R.drawable.hsitory_icon))
+                        .selectedIcon(getResources().getDrawable(R.drawable.forum))
                         .title("论坛")
                         .badgeTitle("forum")
                         .build()
@@ -128,9 +128,9 @@ public class MainAcitivity extends AppCompatActivity implements View.OnClickList
         );
         models.add(
                 new NavigationTabBar.Model.Builder(
-                        getResources().getDrawable(R.drawable.customer_service_icon),
+                        getResources().getDrawable(R.drawable.qa),
                         Color.parseColor(colors[2]))
-                        .selectedIcon(getResources().getDrawable(R.drawable.customer_service_icon))
+                        .selectedIcon(getResources().getDrawable(R.drawable.qa))
                         .title("问答机器人")
                         .badgeTitle("servier")
                         .build()

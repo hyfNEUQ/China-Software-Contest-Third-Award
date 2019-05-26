@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Toast;
 
 import com.neuq.hyf.R;
 
@@ -45,6 +46,13 @@ public class SearcherResultAdapter extends BaseAdapter {
             searcherResultItem.question = view.findViewById(R.id.question);
             searcherResultItem.answer = view.findViewById(R.id.answer);
             searcherResultItem.sourceAndScore = view.findViewById(R.id.sourceAndScore);
+            searcherResultItem.shineButton = view.findViewById(R.id.shinebutton);
+            searcherResultItem.shineButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(context, "关联性+5%", Toast.LENGTH_SHORT).show();
+                }
+            });
             view.setTag(searcherResultItem);
         } else {
             searcherResultItem = (SearcherResultItem) view.getTag();

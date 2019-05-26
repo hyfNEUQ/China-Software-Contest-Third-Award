@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
     xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/buttonborder">
+    android:background="@drawable/buttonborder"
+    app:ignore="NamespaceTypo">
 
     <RelativeLayout
+        android:id="@+id/r1"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true">
@@ -47,7 +50,7 @@
                     android:fontFamily="sans-serif-light"
                     android:gravity="left"
                     android:textColor="@color/aliceblue"
-                    android:textSize="20sp" />
+                    android:textSize="16sp" />
 
                 <ImageButton
                     android:id="@id/expand_collapse"
@@ -59,13 +62,30 @@
             </com.ms.square.android.expandabletextview.ExpandableTextView>
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/sourceAndScore"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/answerView"
-            android:layout_marginTop="5dp"
-            android:textColor="@color/aliceblue"
-            android:textSize="20sp" />
+            android:layout_below="@id/answerView">
+
+            <TextView
+                android:id="@+id/sourceAndScore"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/aliceblue"
+                android:textSize="16sp" />
+
+            <com.sackcentury.shinebuttonlib.ShineButton
+                android:id="@+id/shinebutton"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/sourceAndScore"
+                android:background="@drawable/like"
+                app:allow_random_color="true"
+                app:btn_color="@android:color/darker_gray"
+                app:btn_fill_color="@android:color/holo_green_dark"
+                app:siShape="@raw/like" />
+        </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>

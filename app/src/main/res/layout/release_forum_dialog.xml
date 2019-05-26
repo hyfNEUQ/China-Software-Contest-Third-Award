@@ -32,7 +32,7 @@
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edit_text2"
-            android:layout_width="260dp"
+            android:layout_width="240dp"
             android:layout_height="wrap_content"
             android:hint="故障内容"
             android:textSize="16sp"
@@ -44,9 +44,9 @@
 
         <Button
             android:id="@+id/buttonVoice"
-            android:layout_width="40dp"
-            android:layout_height="50dp"
             android:layout_toRightOf="@id/edit_text2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:background="@drawable/micro"
             android:paddingBottom="10dp" />
     </RelativeLayout>

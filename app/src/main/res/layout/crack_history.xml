@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/crack">
 
     <RelativeLayout
         android:id="@+id/r1"
@@ -23,11 +24,11 @@
 
         <com.getbase.floatingactionbutton.FloatingActionButton
             android:id="@+id/addCrackHistory"
-            android:background="@drawable/add2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_below="@id/tilebar" />
+            android:layout_below="@id/tilebar"
+            android:background="@drawable/addcrack" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -39,7 +40,6 @@
         <com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView
             android:id="@+id/crackList"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/deepskyblue" />
+            android:layout_height="wrap_content" />
     </RelativeLayout>
 </RelativeLayout>
